@@ -5,15 +5,22 @@
       :style="{ width: '100%', height: 200 }"
     />
     <text class="card-title">{{ article.title }}</text>
-    <touchable-opacity class="card-button">
+    <touchable-opacity class="card-button" :on-press="openLink">
       <text class="card-button-txt">Read More</text>
     </touchable-opacity>
   </view>
 </template>
 
 <script>
+import { Linking } from 'react-native';
+
 export default {
-  props: [ 'article' ]
+  props: [ 'article' ],
+  methods: {
+    openLink () {
+      Linking.openURL(this.article.url);
+    },
+  },
 }
 </script>
 
