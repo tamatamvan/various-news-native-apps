@@ -29,6 +29,8 @@ class NewsList extends Component {
 
   renderItem = ({ item }) => <NewsCard article = { item }/>
 
+  keyExtractor = (item, idx) => `news-${item.source.id}-${idx}`
+
   componentDidMount() {
     this.loadArticles();
   }
@@ -38,6 +40,7 @@ class NewsList extends Component {
       <FlatList 
         data = { this.state.articles }
         renderItem = { this.renderItem }
+        keyExtractor = { this.keyExtractor } 
       />
     );
   }
