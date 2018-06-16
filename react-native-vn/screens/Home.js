@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+import NewsList from '../components/NewsList';
+
 class Home extends Component {
   static navigationOptions = {
     title: 'Home - Various News',
@@ -8,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <View style={ styles.container }>
-        <Text>Hello World!</Text>
+        <NewsList/>
       </View>
     );
   }
@@ -16,8 +18,7 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 16,
-    marginRight: 16,
+    margin: 16,
   },
 });
 
