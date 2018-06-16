@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { FlatList, View, Text, Image,  Alert, StyleSheet } from 'react-native';
+import {
+  FlatList,
+  Alert
+} from 'react-native';
+
+import NewsCard from './NewsCard';
 
 import { API_KEY } from '../config';
 
@@ -22,15 +27,7 @@ class NewsList extends Component {
       });
   }
 
-  renderItem = ({ item }) => (
-    <View>
-      <Image 
-        style={{ width: '100%', height: 200 }}
-        source={{ uri: item.urlToImage }}
-      />
-      <Text>{ item.title }</Text>
-    </View>
-  )
+  renderItem = ({ item }) => <NewsCard article = { item }/>
 
   componentDidMount() {
     this.loadArticles();
