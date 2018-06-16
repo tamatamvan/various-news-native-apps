@@ -29,6 +29,7 @@ class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    paddingBottom: 0,
   },
 });
 
