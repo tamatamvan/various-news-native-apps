@@ -1,8 +1,23 @@
 <template>
-  <view class="container">
-    <text class="text-color-primary">My Vue Native App</text>
-    </view>
+  <app-navigation/>
 </template>
+
+<script>
+import { StackNavigator } from 'vue-native-router';
+
+import HomeScreen from './screens/Home.vue';
+
+const AppNavigation = StackNavigator({
+  Home: HomeScreen
+});
+
+export default {
+  components: {
+    AppNavigation
+  }
+}
+</script>
+
  
 <style>
 .container {
