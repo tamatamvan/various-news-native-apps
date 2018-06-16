@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Image,
+  TouchableOpacity,
   StyleSheet,
 } from 'react-native';
 
@@ -13,6 +14,9 @@ const NewsCard = ({ article }) => (
       source={{ uri: article.urlToImage }}
     />
     <Text style={ styles.title }>{ article.title }</Text>
+    <TouchableOpacity style={ styles.readMoreBtn }>
+      <Text style={ styles.readMoreTxt }>Read More</Text>
+    </TouchableOpacity>
   </View>
 )
 
@@ -30,6 +34,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     padding: 4,
+  },
+  readMoreBtn: {
+    backgroundColor: '#2962FF',
+    padding: 8,
+  },
+  readMoreTxt: {
+    color: '#fff',
+    textAlign: 'center',
   },
 });
 
