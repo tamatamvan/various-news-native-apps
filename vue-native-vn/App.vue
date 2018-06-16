@@ -8,7 +8,12 @@ import { StackNavigator } from 'vue-native-router';
 import HomeScreen from './screens/Home.vue';
 
 const AppNavigation = StackNavigator({
-  Home: HomeScreen
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: 'Home - Various News'
+    }
+  }
 });
 
 export default {
