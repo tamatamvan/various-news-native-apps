@@ -9,7 +9,9 @@ class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'Home - Various News',
     headerRight: (
-      <TouchableOpacity style={{ padding: 16 }}>
+      <TouchableOpacity style={{ padding: 16 }}
+        onPress={ () => navigation.navigate('About') }
+      >
         <MaterialIcons name="info-outline" color="#fff" size={ 32 }/>
       </TouchableOpacity>
     )
