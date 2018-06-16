@@ -6,7 +6,7 @@ import {
 
 import NewsCard from './NewsCard';
 
-import { API_KEY } from '../config';
+import { API_KEY } from '../../config';
 
 import axios from 'axios';
 
