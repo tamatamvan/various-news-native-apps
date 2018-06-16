@@ -5,6 +5,9 @@
       :style="{ width: '100%', height: 200 }"
     />
     <text class="card-title">{{ article.title }}</text>
+    <touchable-opacity class="card-button">
+      <text class="card-button-txt">Read More</text>
+    </touchable-opacity>
   </view>
 </template>
 
@@ -25,5 +28,13 @@ export default {
   font-size: 18;
   font-weight: bold;
   padding: 4;
+}
+.card-button {
+  padding: 8;
+  background-color: #2962ff;
+}
+.card-button-txt {
+  color: #fff;
+  text-align: center;
 }
 </style>
