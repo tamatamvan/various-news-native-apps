@@ -16,5 +16,6 @@ export default {
 <style>
 .container {
   padding: 16;
+  padding-bottom: 0;
 }
 </style>
