@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  Linking,
   StyleSheet,
 } from 'react-native';
 
@@ -14,7 +15,9 @@ const NewsCard = ({ article }) => (
       source={{ uri: article.urlToImage }}
     />
     <Text style={ styles.title }>{ article.title }</Text>
-    <TouchableOpacity style={ styles.readMoreBtn }>
+    <TouchableOpacity style={ styles.readMoreBtn }
+      onPress={ () => Linking.openURL(article.url) }
+    >
       <Text style={ styles.readMoreTxt }>Read More</Text>
     </TouchableOpacity>
   </View>
