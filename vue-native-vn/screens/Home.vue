@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="container">
     <news-list/>
   </view>
 </template>
@@ -12,3 +12,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.container {
+  padding: 16;
+}
+</style>
