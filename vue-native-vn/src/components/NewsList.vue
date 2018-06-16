@@ -10,10 +10,10 @@
 import React from 'react';
 import axios from 'axios';
 
-import NewsCard from '../components/NewsCard.vue';
+import NewsCard from './NewsCard.vue';
 
 import { Alert } from 'react-native';
-import { API_KEY } from '../config.js';
+import { API_KEY } from '../../config.js';
 
 export default {
   data () {

@@ -9,8 +9,8 @@ import { Text } from 'react-native';
 
 import { StackNavigator } from 'vue-native-router';
 
-import HomeScreen from './screens/Home.vue';
-import AboutScreen from './screens/About';
+import HomeScreen from './src/screens/Home.vue';
+import AboutScreen from './src/screens/About';
 
 const AppNavigation = StackNavigator({
   Home: {
