@@ -1,3 +1,20 @@
+# Various News Vue Native
+
+This project was created with vue-native which is based on react-native that was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+
+It runs on expo, and consume data from [NewsAPI](https://newsapi.org/).
+
+So, before run this app, make sure you have set up your react-native development evironment. And get your API KEY from [NewsAPI](https://newsapi.org/).
+
+Once you get the API KEY, create a file named `config.js` which contain this code bellow:
+```javascript
+export const API_KEY='<your_api_key>'
+```
+
+After you've created the `config.js` file with your API_KEY, you're good to go. Further documentation about how to run this app, check the previously `create-react-native-app` generated documentation section bellow.
+
+----
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
