@@ -2,9 +2,9 @@
   <Page class="page">
     <ActionBar class="action-bar" title="Home - Various News"/>
     <StackLayout>
-      <ListView for="article in articles">
+      <ListView for="article in articles" class="list-container">
         <v-template>
-          <Label :text="article.title"/>
+          <NewsCard :article="article"/>
         </v-template>
       </ListView>
       <Button class="btn btn-primary" @tap="$router.push('/hello')">Hello World 123</Button>
@@ -14,25 +14,38 @@
 
 <script>
 import { API_KEY } from '../config';
+
+import NewsCard from './NewsCard.vue';
+
 export default {
- data () {
-   return {
-     articles: [],
-   }
- },
- methods: {
-   fetchNews () {
-     console.log('HAHAHA')
-     this.$http.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`)
-      .then(({ data }) => {
-        this.articles = data.articles;
-      })
-      .catch(err => console.log(err));
-   },
- },
- mounted () {
-   this.fetchNews();
- },
+  components: {
+    NewsCard,
+  },
+  data () {
+    return {
+      articles: [],
+    }
+  },
+  methods: {
+    fetchNews () {
+      console.log('HAHAHA')
+      this.$http.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`)
+        .then(({ data }) => {
+          console.log('DONE');
+          this.articles = data.articles;
+        })
+        .catch(err => console.log(err));
+    },
+  },
+  mounted () {
+    this.fetchNews();
+  },
 }
 </script>
+
+<style>
+.list-container {
+  height: 100%;
+}
+</style>
 
