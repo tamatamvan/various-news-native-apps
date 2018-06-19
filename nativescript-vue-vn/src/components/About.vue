@@ -1,12 +1,12 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Hello world">
+    <ActionBar class="action-bar" :title="$route.meta.title">
       <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" @tap="$router.push('/home')"/>
     </ActionBar>
 
     <StackLayout class="hello-world">
-      <Label class="body" textWrap=true text="Various News App - NativeScript-Vue Version"/>
-      <Label text="By: tamatamvan"/>
+      <Label class="text-center" textWrap=true text="Various News App - NativeScript-Vue Version"/>
+      <Label class="text-center" text="By: tamatamvan"/>
     </StackLayout>
 
   </Page>
@@ -16,8 +16,7 @@
   .hello-world {
     margin: 20;
   }
-
-  Label {
-    color: red;
+  .text-center {
+    text-align: center;
   }
 </style>
