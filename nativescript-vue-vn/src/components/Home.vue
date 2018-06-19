@@ -1,6 +1,11 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Home - Various News"/>
+    <ActionBar class="action-bar" title="Home - Various News">
+      <ActionItem @tap="toAboutPage"
+        ios.systemIcon="16" ios.position="right"
+        text="About" android.position="popup">
+      </ActionItem>
+    </ActionBar>
     <StackLayout class ="main-container">
       <ListView for="article in articles" class="list-container">
         <v-template>
@@ -34,6 +39,10 @@ export default {
           this.articles = data.articles;
         })
         .catch(err => console.log(err));
+    },
+    toAboutPage () {
+      console.log('ke about')
+      this.$router.push('/about');
     },
   },
   mounted () {
