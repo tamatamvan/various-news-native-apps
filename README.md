@@ -8,6 +8,6 @@ The main reason for this repository to exist is to help people choose the right 
 
 * [react-native](https://github.com/tamatamvan/various-news-native-apps/tree/master/react-native-vn)
 * [vue-native](https://github.com/tamatamvan/various-news-native-apps/tree/master/vue-native-vn)
-* nativescript-vue (coming soon)
+* [nativescript-vue](https://github.com/tamatamvan/various-news-native-apps/tree/master/nativescript-vue-vn)
 * weex (coming soon)
 * flutter (coming soon)
