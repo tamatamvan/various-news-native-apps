@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import router from './router';
 
-
 import './styles.scss';
 
 Vue.prototype.$http = axios;

@@ -1,13 +1,12 @@
 <template>
   <Page class="page">
     <ActionBar class="action-bar" title="Home - Various News"/>
-    <StackLayout>
+    <StackLayout class ="main-container">
       <ListView for="article in articles" class="list-container">
         <v-template>
           <NewsCard :article="article"/>
         </v-template>
       </ListView>
-      <Button class="btn btn-primary" @tap="$router.push('/hello')">Hello World 123</Button>
     </StackLayout>
   </Page>
 </template>
@@ -44,6 +43,9 @@ export default {
 </script>
 
 <style>
+.main-container {
+  padding: 16;
+}
 .list-container {
   height: 100%;
 }
